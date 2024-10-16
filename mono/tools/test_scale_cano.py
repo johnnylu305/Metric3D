@@ -26,6 +26,8 @@ from mono.utils.running import load_ckpt
 from mono.utils.do_test import do_scalecano_test_with_custom_data
 from mono.utils.mldb import load_data_info, reset_ckpt_path
 from mono.utils.custom_data import load_from_annos, load_data
+from mono.model.backbones import *
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a segmentor')
