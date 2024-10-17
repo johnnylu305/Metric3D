@@ -84,6 +84,7 @@ def build_camera_model(H : int, W : int, intrinsics : list) -> np.array:
     cam_model = np.stack([x_center, y_center, fov_x, fov_y], axis=2)
     return cam_model
 
+
 def resize_for_input(image, output_shape, intrinsic, canonical_shape, to_canonical_ratio):
     """
     Resize the input.
@@ -155,6 +156,7 @@ def get_prediction(
     pred_depth, confidence, output_dict = model.module.inference(data)
 
     return pred_depth, output_dict
+
 
 def transform_test_data_scalecano(rgb, intrinsic, data_basic):
     """
